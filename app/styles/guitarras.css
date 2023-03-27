@@ -1,0 +1,77 @@
+.guitarras-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+@media (min-width: 768px) {
+  .guitarras-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .guitarras-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.guitarra {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.guitarra .contenido{
+    padding: 1rem;
+}
+.guitarra .contenido h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+.guitarra .descripcion{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* Todo desde el display webkit box es para ajustar la caja de descripcion de todos los articulos, de esta manera se controla todas las cajas para que tengan la misma dimension todas; el line clamp es el que controla cuantas lineas de texto mostrar,s e le puede ajustar al que mejor plazca */
+    overflow: hidden; /* Para que no se vea lo acumulado y tenga estetica */
+    font-size: 1.8rem;
+}
+.guitarra .precio{
+    color: var(--primary);
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 900;
+
+}
+.formulario{
+display: flex;
+flex-direction: column;
+
+}
+.formulario label{
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+
+}
+.formulario select{
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--black);
+  border-radius: 1rem;
+
+}
+.formulario input[type='submit']{
+margin-top: 3rem;
+background-color: var(--black);
+padding: 1.4rem;
+border: none;
+color: var(--white);
+font-weight: 700;
+text-transform: uppercase;
+transition-property: background-color;
+transition-duration: 300ms;
+}
+.formulario input[type='submit']:hover{
+  cursor: pointer;
+  background-color: var(--primary);
+}
